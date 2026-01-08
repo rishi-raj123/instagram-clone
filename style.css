@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fafafa;
+    color: #262626;
+}
+
+.container {
+    max-width: 935px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #fff;
+    border-bottom: 1px solid #dbdbdb;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 935px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    height: 30px;
+}
+
+.search-bar {
+    background-color: #efefef;
+    border: none;
+    padding: 7px 15px;
+    border-radius: 8px;
+    width: 200px;
+}
+
+.nav-icons .icon {
+    font-size: 22px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+/* Profile Header */
+.profile-header {
+    display: flex;
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+.profile-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid #dbdbdb;
+    object-fit: cover;
+}
+
+.profile-details {
+    flex: 2;
+}
+
+.username-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.username-row h2 {
+    font-weight: 300;
+    font-size: 28px;
+}
+
+.edit-btn {
+    padding: 5px 10px;
+    border: 1px solid #dbdbdb;
+    background: transparent;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.stats-row {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 40px;
+}
+
+.full-name {
+    font-weight: 600;
+}
+
+.website-link {
+    text-decoration: none;
+    color: #00376b;
+    font-weight: 600;
+}
+
+/* Tabs */
+.tabs {
+    border-top: 1px solid #dbdbdb;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 15px 0;
+}
+
+.tab {
+    font-size: 12px;
+    font-weight: 600;
+    color: #8e8e8e;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.tab.active {
+    color: #262626;
+    border-top: 1px solid #262626;
+    margin-top: -16px;
+    padding-top: 15px;
+}
+
+/* Image Grid */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.grid-item img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Makes images perfectly square */
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-image {
+        margin-bottom: 20px;
+    }
+    .username-row {
+        justify-content: center;
+    }
+    .stats-row {
+        justify-content: center;
+        gap: 20px;
+    }
+    .image-grid {
+        gap: 3px;
+    }
+}
